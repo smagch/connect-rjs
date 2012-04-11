@@ -1,0 +1,18 @@
+{
+  "author": "smagch <smagch@gmail.com> (https://github.com/)",
+  "name": "connect-rjs",
+  "description": "connect middleware for requirejs optimizer",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "engines": {
+    "node": "~0.6.11"
+  },
+  "dependencies": {
+    "requirejs": "1.x",
+    "underscore": "*",
+    "minimatch": "*"
+  },
+  "devDependencies": {}
+}
