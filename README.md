@@ -97,11 +97,11 @@ Since this module is for development, the configure is like this in express app.
 
 ## Options
 
-*  all options except for `suffix` and `src`, are pass to `requirejs.optimize`. For details [r.js options](https://github.com/jrburke/r.js/blob/master/build/example.build.js)
+*  all options are passing to `requirejs.optimize` unless it's connect-rjs specific options. For details [r.js options](https://github.com/jrburke/r.js/blob/master/build/example.build.js)
 * `optimize` : `none` by default. No uglify by default since this module is just for development.
+
+### connect-rjs specific options
+
 * `suffix` : `-built.js` by defaults.
-* `src` : required. In express application, it will be `__dirname + '/public'`;
-
-
-
+* `src` : required. In express application, it'll be `__dirname + '/public'`;
 
