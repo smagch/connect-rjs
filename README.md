@@ -1,20 +1,20 @@
 # connect middleware for [requirejs optimizer](https://github.com/jrburke/r.js)
 
+This module is just for development. Don't use in production. It's insanely inefficient to use in production.
+
 ## Benefit
 
 the benefit using this middleware is quite simeple. Rather than doing like
 
-`<!-- use main-built.js in production -->`
+```html
+<!-- use main-built.js in production -->
+<!-- <script src='/javascripts/libs/require.js' data-main='/javascripts/main-built.js'></script> -->
+<script src='/javascripts/libs/require.js' data-main='/javascripts/main.js'></script>
+```
 
-`<!-- <script src='/javascripts/libs/require.js' data-main='/javascripts/main-built.js'></script> -->`
-
-`<script src='/javascripts/libs/require.js' data-main='/javascripts/main.js'></script>`
-
-, just single line of code
+Let's go simple with a single line of code
 
 `<script src='/javascripts/libs/require.js' data-main='/javascripts/main-built.js'></script>`
-
-This module is just for development. Don't use in production. It's insanely inefficient to use in production.
 
 ## Example
 
@@ -29,7 +29,6 @@ The following code will listen `./public/javascripts/main-built.js`
     }));
 
 You can use [minimatch](https://github.com/isaacs/minimatch) to specify `name`.
-This will match
 
     app.use(connectRjs({
       src: __dirname + '/public',
@@ -62,8 +61,8 @@ You can also pass Array of options.
 Or, you can pass second argument as defaults option
 
     app.use(connectRjs([
-      { name: 'models/main'},
-      { name: 'views/**/main'}
+      { name: 'models/main' },
+      { name: 'views/**/main' }
     ],{
         src: __dirname + '/public',
         baseUrl: '/javascripts'
